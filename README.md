@@ -1,5 +1,12 @@
-Scotch Box
+Scotch Box - LMG Flow version (//todo: change name?)
 ==========
+based on Scotch Box, with a few mods for my personal workflow:
+
+-  Now includes Xdebug (can't live without)
+-  RAM is increased by default, as well as box will use two CPUs
+-  if you ssh into box, default dir is web dir.  Also, git highlighting. 
+
+------------
 
 ## Check out the official docs at: [box.scotch.io][16]
 ## [Read the getting started article](https://scotch.io/bar-talk/introducing-scotch-box-a-vagrant-lamp-stack-that-just-works)
