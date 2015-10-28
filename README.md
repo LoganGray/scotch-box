@@ -2,9 +2,13 @@ Scotch Box - LMG Flow version (//todo: change name?)
 ==========
 based on Scotch Box, with a few mods for my personal workflow:
 
--  Now includes Xdebug (can't live without)
--  RAM is increased by default, as well as box will use two CPUs
++  RAM is increased by default, as well as box will use two CPUs (ready)
+
 -  if you ssh into box, default dir is web dir.  Also, git highlighting. 
+-  Now includes Xdebug (can't live without)
+
+
+
 
 ------------
 
