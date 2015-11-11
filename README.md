@@ -4,8 +4,12 @@ based on Scotch Box, with a few mods for my personal workflow:
 
 +(done)  RAM is increased by default, as well as box will use two CPUs (ready)
 
--(/var/www/public)  if you ssh into box, default dir is web dir.  Also, git highlighting. 
--(done-ish)  Now includes Xdebug (can't live without)
+* (semi-working)(/var/www/public)  if you ssh into box, default dir is web dir.  
+* (todo) git highlighting at prompt 
+* (done-ish)  Now includes Xdebug (can't live without)
+//todo:   add calculated path to xdebug.so
+* gitset.sh: git config sets aliases, and default user
+* ?? ask user for git credentials  or mod intro screen to ask user to run gitset.sh ?
 
 
 
