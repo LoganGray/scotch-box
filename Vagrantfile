@@ -15,5 +15,10 @@ Vagrant.configure("2") do |config|
         v.memory = 1024
         v.cpus = 2
     end
+    
+    config.ssh.insert_key = false
 
+    config.vm.provision "shell" do |script|
+    script.path = "provisioner.sh"
+    end
 end
