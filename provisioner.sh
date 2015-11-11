@@ -130,11 +130,6 @@ xdebug.idekey = \"PHPSTORM\"" >> /etc/php5/apache2/php.ini
 echo "Setting locale correctly"
 sudo locale-gen en_GB.UTF-8
 
-echo "Adding composer vendor folders to path"
-sudo echo "PATH='$PATH:~/.composer/vendor/bin'" >> /home/vagrant/.profile
-
-# echo "Installing Drush"
-# sudo apt-get install -y drush
 
 echo "Restarting Apache one last time..."
 sudo service apache2 restart
@@ -144,10 +139,6 @@ sudo apt-get install -y dos2unix
 dos2unix /vagrant/backup.sh
 ln -s /vagrant/backup.sh /home/vagrant/backup
 
-#move to web dir
-cd /var/www/public/
-
-# Uncomment for a nice solarized prompt (doesn't seem to work on windows)
-#sudo echo "export PS1='\[\033[38;5;198m\]\u\[$(tput sgr0)\]\[\033[38;5;6m\]@\[$(tput sgr0)\]\[\033[38;5;172m\]\h\[$(tput sgr0)\]\[\033[38;5;1m\]:\[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \n\[$(tput sgr0)\]\[\033[38;5;172m\]\\$ \[$(tput sgr0)\]'" >> /home/vagrant/.profile
-sudo echo "export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] '" >> /home/vagrant/.profile
+#append contents of dotprofile to the vagrant profile
+cat /var/www/dotprofile.append.sh >> /home/vagrant/.profile
 
