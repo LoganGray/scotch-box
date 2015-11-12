@@ -140,5 +140,7 @@ dos2unix /vagrant/backup.sh
 ln -s /vagrant/backup.sh /home/vagrant/backup
 
 #append contents of dotprofile to the vagrant profile
-cat /var/www/dotprofile.append.sh >> /home/vagrant/.profile
-
+# doesn't work too well. :(
+#cat /var/www/dotprofile.append.sh >> /home/vagrant/.profile
+#trying only bashrc now
+# todo:  look at sexy prompt in particular .bash_prompt refenced from .bashrc
