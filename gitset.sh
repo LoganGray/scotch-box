@@ -13,12 +13,46 @@ git config --global status.showuntrackedfiles no;
 git config --global push.default simple;
 
 #GIT setup GIT default user config (customize to yourself)
+function gitnameandemail {
+echo "------------------------------------------------"
 echo "For final gitconfig setup, Please"
 echo -n "Enter your full name and press [ENTER]: "
 read name
 echo -n "Enter your email address and press [ENTER]: "
 read emailadr
-# todo: verify and confirm name and email
+}
+# todo: Maybe colorize confirm anme and email?
 
-git config --global user.name "$name"; 
-git config --global user.email $emailadr; 
+
+while true=true:
+do
+	gitnameandemail
+	echo "You entered:"
+	echo "Name: $name"
+	echo "Email Address:  $emailadr"
+	read -r -p "Is this correct? [Y/n] " input
+
+	case $input in
+	    [yY][eE][sS]|[yY]) 
+			echo "writing Git Config Global..."
+			git config --global user.name "$name"; 
+ 			git config --global user.email $emailadr; 
+ 			echo "done."
+			exit 0
+			;;
+
+	    [nN][oO]|[nN]) 
+			# echo "No"
+			
+	       		;;
+
+	    *)
+		echo "Invalid input..."
+		;;
+	esac
+done
+
+# never reached
+echo "end of script"
+
+
