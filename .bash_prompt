@@ -255,7 +255,7 @@ sexy_bash_prompt_get_git_info () {
   fi
 }
 
-# Define the sexy-bash-prompt
+# Define the sexy-bash-prompt (custom per Lmg)
 PS1="#\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\]\
 \[$sexy_bash_prompt_preposition_color\]@\[$sexy_bash_prompt_reset\]\
 \[$sexy_bash_prompt_device_color\]\h\[$sexy_bash_prompt_reset\]\
@@ -267,3 +267,8 @@ PS1="#\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\]\
   echo -n \"\[$sexy_bash_prompt_git_progress_color\]\$(sexy_bash_prompt_get_git_progress)\" && \
   echo -n \"\[$sexy_bash_prompt_preposition_color\]\")\n\[$sexy_bash_prompt_reset\]\
 \[$sexy_bash_prompt_symbol_color\] \[$sexy_bash_prompt_reset\]"
+
+# Change to working web dir
+cd /var/www/public
+
+# test if /home/vagrant/.gitconfig exists, and if so, prompt them to run ./gitset.sh  to finalize settings
