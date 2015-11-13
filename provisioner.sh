@@ -141,4 +141,5 @@ ln -s /vagrant/backup.sh /home/vagrant/backup
 #cat /var/www/dotprofile.append.sh >> /home/vagrant/.profile
 #trying only bashrc now
 # Sexy Prompt install  (take a look  .bash_prompt refenced from .bashrc)
-(cd /tmp && git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
+#(cd /tmp && git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
+cat /var/www/.bash_prompt >> /home/vagrant/.bashrc
