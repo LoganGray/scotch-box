@@ -143,3 +143,8 @@ ln -s /vagrant/backup.sh /home/vagrant/backup
 # Sexy Prompt install  (take a look  .bash_prompt refenced from .bashrc)
 #(cd /tmp && git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 cat /var/www/.bash_prompt >> /home/vagrant/.bashrc
+
+#copy gitset.sh to executable area for user
+cp /var/www/gitset.sh /usr/local/bin
+chown vagrant:vagrant /usr/local/bin/gitset.sh
+chmod +x /usr/local/bin/gitset.sh
