@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # setup GIT aliases
 
 git config --global alias.co checkout; 
