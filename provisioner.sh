@@ -109,14 +109,12 @@ echo "
 ; find / -name 'xdebug.so' 2> /dev/null
 ;;;default used:  zend_extension=\"/usr/lib/php5/20131226/xdebug.so\"
 zend_extension=\"/usr/lib/php5/20131226/xdebug.so\"
-; xdebug
 
 xdebug.default_enable = 1
-;;;;;;;;xdebug.idekey = "vagrant"
+;;;xdebug.idekey = "vagrant"
 xdebug.remote_autostart = 0
 xdebug.remote_log=\"/var/log/xdebug/xdebug.log\"
-
-;;;;;xdebug.remote_host=10.0.2.2 ; IDE-Environments IP, from vagrant box.
+;;unsure about this setting necessity;;;xdebug.remote_host=10.0.2.2 ; IDE-Environments IP, from vagrant box.
 
 xdebug.remote_connect_back = 1
 xdebug.remote_enable = 1
@@ -130,7 +128,6 @@ xdebug.idekey = \"PHPSTORM\"" >> /etc/php5/apache2/php.ini
 echo "Setting locale correctly"
 sudo locale-gen en_GB.UTF-8
 
-
 echo "Restarting Apache one last time..."
 sudo service apache2 restart
 
@@ -143,4 +140,5 @@ ln -s /vagrant/backup.sh /home/vagrant/backup
 # doesn't work too well. :(
 #cat /var/www/dotprofile.append.sh >> /home/vagrant/.profile
 #trying only bashrc now
-# todo:  look at sexy prompt in particular .bash_prompt refenced from .bashrc
+# Sexy Prompt install  (take a look  .bash_prompt refenced from .bashrc)
+(cd /tmp && git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
