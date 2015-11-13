@@ -1,0 +1,11 @@
+# Auto detect text files and perform LF normalization        
+* text=auto
+*.cs     text diff=csharp
+*.html   text diff=html
+*.css    text
+*.js     text
+*.sql    text
+*.php    text
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+
