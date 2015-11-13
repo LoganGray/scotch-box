@@ -272,3 +272,5 @@ PS1="#\[$sexy_bash_prompt_user_color\]\u\[$sexy_bash_prompt_reset\]\
 cd /var/www/public
 
 # test if /home/vagrant/.gitconfig exists, and if so, prompt them to run ./gitset.sh  to finalize settings
+ 
+[ -e /home/vagrant/.gitconfig ] && echo "GitConfig Found :)" || echo ".gitconfig file NOT found.  Please run gitset.sh to finalize Git setup."
