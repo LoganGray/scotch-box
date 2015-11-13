@@ -1,3 +1,4 @@
+#!/bin/bash
 # setup GIT aliases
 
 git config --global alias.co checkout; 
@@ -11,5 +12,12 @@ git config --global status.showuntrackedfiles no;
 git config --global push.default simple;
 
 #GIT setup GIT default user config (customize to yourself)
-git config --global user.name "Logan Gray"; git config --global user.email logan@intensetech.com; 
+echo "For final gitconfig setup, Please"
+echo -n "Enter your full name and press [ENTER]: "
+read name
+echo -n "Enter your email address and press [ENTER]: "
+read emailadr
+# todo: verify and confirm name and email
 
+git config --global user.name "$name"; 
+git config --global user.email $emailadr; 
