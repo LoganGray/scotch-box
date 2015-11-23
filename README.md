@@ -5,14 +5,17 @@ based on Scotch Box, with a few mods for my personal workflow:
 +(done)  RAM is increased by default, as well as box will use two CPUs (ready)
 
 * (semi-working)(/var/www/public)  if you ssh into box, default dir is web dir.  
-* (todo) git highlighting at prompt 
-* (done-ish)  Now includes Xdebug (can't live without)
++(done) git highlighting at prompt 
++(done)  Now includes Xdebug (can't live without)
 //todo:   add calculated path to xdebug.so
 * gitset.sh: git config sets aliases, and default user
-* ?? ask user for git credentials  or mod intro screen to ask user to run gitset.sh ?
+Asks user  to run gitset.sh if no .gitconfig file is found.  
 
+------------ NOTE: Windows Users (line feed etc issues)
+before you do a git clone of this, you might want to do the following to make sure that the files ARE NOT converted from LF -> CRLF.  
 
-
+git config --global core.autocrlf false
+git config --global core.eol lf
 
 ------------
 
