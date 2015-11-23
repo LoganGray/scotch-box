@@ -2,20 +2,22 @@ Scotch Box - LMG Flow version (//todo: change name?)
 ==========
 based on Scotch Box, with a few mods for my personal workflow:
 
-+(done)  RAM is increased by default, as well as box will use two CPUs (ready)
+ - (done)  RAM is increased by default, as well as box will use two CPUs (ready)
+ - (semi-working)(/var/www/public)  if you ssh into box, default dir is web dir.  
+ - (done) git highlighting at prompt 
+ - (done)  Now includes Xdebug (can't live without)
+ - Asks user  to run gitset.sh if no .gitconfig file is found.   (gitset.sh: creates a standard git config, including  setting aliases, and default user id settings)
 
-* (semi-working)(/var/www/public)  if you ssh into box, default dir is web dir.  
-+(done) git highlighting at prompt 
-+(done)  Now includes Xdebug (can't live without)
-//todo:   add calculated path to xdebug.so
-* gitset.sh: git config sets aliases, and default user
-Asks user  to run gitset.sh if no .gitconfig file is found.  
+> todo:   add calculated path to xdebug.so
+> 
 
------------- NOTE: Windows Users (line feed etc issues)
-before you do a git clone of this, you might want to do the following to make sure that the files ARE NOT converted from LF -> CRLF.  
+### NOTE: Windows Users (line feed etc issues)
+Before you do a git clone of this, you might want to do the following to make sure that the files ARE NOT converted from LF -> CRLF. 
 
+```bash
 git config --global core.autocrlf false
 git config --global core.eol lf
+```
 
 ------------
 
