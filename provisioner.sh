@@ -135,6 +135,8 @@ echo "Installing dos2unix"
 sudo apt-get install -y dos2unix
 dos2unix /vagrant/backup.sh
 ln -s /vagrant/backup.sh /home/vagrant/backup
+dos2unix /var/www/.bash_prompt
+dos2unix /var/www/gitset.sh
 
 #append contents of dotprofile to the vagrant profile
 # doesn't work too well. :(
