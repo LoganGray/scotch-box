@@ -9,7 +9,7 @@ based on Scotch Box, with a few mods for my personal workflow:
  - Asks user  to run gitset.sh if no .gitconfig file is found.   (gitset.sh: creates a standard git config, including  setting aliases, and default user id settings)
 
 > todo:   add calculated path to xdebug.so
-> 
+> todo:  fix issue with sync/file sync for mac  (taking out NFS seems to fix it for mac)  Maybe some OS detect?
 
 ### NOTE: Windows Users (line feed etc issues)
 Before you do a git clone of this, you might want to do the following to make sure that the files ARE NOT converted from LF -> CRLF. 
