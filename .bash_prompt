@@ -274,3 +274,12 @@ cd /var/www/public
 # test if /home/vagrant/.gitconfig exists, and if so, prompt them to run ./gitset.sh  to finalize settings
  
 [ -e /home/vagrant/.gitconfig ] && gcfound=1  || echo -e "\n.gitconfig file NOT found.  Please run gitset.sh to finalize Git setup.\n"
+
+# Check if timezone has been set, and prompt to set it correctly 
+timezoneset=$(grep Etc/UTC /etc/timezone)
+if [ $? -eq 0 ]
+  then
+  echo -e "               NOTICE: Timezone does not appear to be set.  \n To set your timezone correctly, try running: \n\nsudo dpkg-reconfigure tzdata \n"
+fi
+
+
